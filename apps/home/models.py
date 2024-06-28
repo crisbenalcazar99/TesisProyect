@@ -9,5 +9,3 @@ class RegistroTemperatura(models.Model):
 
     def __str__(self):
         return f"Registro {self.id} - Temp: {self.temperatura}, Humedad: {self.humedad}"
-
-class Regs
