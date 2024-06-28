@@ -1,10 +1,13 @@
-# -*- encoding: utf-8 -*-
-"""
-Copyright (c) 2019 - present AppSeed.us
-"""
-
 from django.db import models
-from django.contrib.auth.models import User
 
-# Create your models here.
 
+class RegistroTemperatura(models.Model):
+    temperatura = models.FloatField()
+    humedad = models.FloatField()
+    fecha_registro = models.DateTimeField(auto_now_add=True)
+    id = models.AutoField(primary_key=True)
+
+    def __str__(self):
+        return f"Registro {self.id} - Temp: {self.temperatura}, Humedad: {self.humedad}"
+
+class Regs
